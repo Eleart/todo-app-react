@@ -1,10 +1,91 @@
+:root {
+  --main-primary-color: #1E1E1E;
+  --main-secondary-color: #262626;
+  --main-terciary-color: #DE4C4A;
+  --border-color: #3D3D3D;
+  --main-font-color: white;
+}
+
 body {
   margin: 0;
-  font-family: src("./fonts/blinkmacsystemfont-black.ttf"),Arial, Helvetica, sans-serif;
+  font-family: "Fira Sans", sans-serif;
+  background-color: var(--main-primary-color);
+  color: var(--main-font-color);
 }
 .header {
-  background-color: #DE4C4A;
-  color: white;
+  background-color: var(--main-terciary-color);
   height: 50px;
   font-size: xxx-large;
+}
+
+.todo-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+  margin: auto;
+}
+
+.todo-list-form {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  width: 100%;
+}
+
+.todo-list-btn {
+  background-color: var(--main-terciary-color);
+  color: var(--main-font-color);
+  height: 30px;
+  width: 30%;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 2%;
+}
+
+.todo-list-input {
+  background-color: var(--main-primary-color);
+  border: var(--border-color) 1px solid;
+  height: 26px;
+  border-radius: 5px;
+  width: 68%;
+  outline: none;
+  color: var(--main-font-color);
+}
+.todo-list-input:focus {
+  background-color: var(--main-secondary-color);
+}
+
+.todo-list-item {
+ background-color: var(--main-secondary-color);
+  border: var(--border-color) 1px solid;
+  border-radius: 5px;
+  height: 30px;
+  width: 96%;
+  display: flex;
+  align-items: center;
+  padding: 0 2%;
+  margin-top: 2%;
+  animation: scale 0.5s ease-in-out 0s;
+}
+@keyframes scale {
+  0% {transform: scale(0)}
+  100% {transform: scale(1)}
+}
+.todo-list-item-container {
+  width: 100%;
+}
+
+.footer {
+  background-color: var(--main-terciary-color);
+  height: 50px;
+  position: fixed;
+  bottom:0;
+  width:100%;
+  margin-top: 5px;
 }

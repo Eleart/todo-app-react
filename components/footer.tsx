@@ -1,6 +1,10 @@
-﻿const Footer = () => {
+﻿import React from 'react';
+
+const Footer = () => {
     return (
-        <footer className="footer"> pouf pouf</footer>
+        <div className="footer">
+            <footer></footer>
+        </div>
     )
 }
 

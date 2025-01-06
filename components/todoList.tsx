@@ -13,14 +13,14 @@ const TodoList = () => {
 
 
     return(
-        <>
+        <div className="todo-list-container">
             <AddTodoButton  addTodo={setTodoList}/>
-            <div>
+            <div className="todo-list-item-container">
                 {
-                    todoList.map((t) => <TodoItem key={t.id} todoItem={t}/>)
+                    todoList.map((t) => <TodoItem key={t.id} removeTodo={setTodoList} todoItem={t}/>)
                 }
             </div>
-        </>
+        </div>
     );
 };
 
